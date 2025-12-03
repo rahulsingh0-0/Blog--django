@@ -1,0 +1,14 @@
+{% load static %}
+
+<li>
+  <a href={% url 'post_detail' id=post.id %}>
+    <article class="post">
+      {% if post.image %}
+        <img src="{{ post.image.url  }}" alt="{{ post.title }}" />
+      {% endif %}
+      <div class="post__content"></div>
+      <h3>{{ post.title }}</h3> 
+      <p>{{ post.excerpt }}</p>
+    </article>
+  </a>
+</li>
